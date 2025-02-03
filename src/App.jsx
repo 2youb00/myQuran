@@ -1,13 +1,13 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
-import Layout from "./components/Layout"
-import SurahList from "./components/SurahList"
-import QuranReader from "./components/QuranReader"
-import Search from "./components/Search"
-import Bookmarks from "./components/Bookmarks"
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Layout from "./components/Layout";
+import SurahList from "./components/SurahList";
+import QuranReader from "./components/QuranReader";
+import Search from "./components/Search";
+import Bookmarks from "./components/Bookmarks";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/myQuran">
       <Layout>
         <Routes>
           <Route path="/" element={<SurahList />} />
@@ -17,8 +17,7 @@ function App() {
         </Routes>
       </Layout>
     </Router>
-  )
+  );
 }
 
-export default App
-
+export default App;
